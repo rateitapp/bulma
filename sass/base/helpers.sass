@@ -26,6 +26,9 @@
     $i: index($sizes, $size)
     .is-size-#{$i}#{if($target == '', '', '-' + $target)}
       font-size: $size !important
+  @each $name, $size in $sizes-map
+    .is-size-#{$name}#{if($target == '', '', '-' + $target)}
+      font-size: $size !important
 
 +typography-size()
 

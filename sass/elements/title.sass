@@ -50,6 +50,9 @@ $subtitle-negative-margin: -1.25rem !default
     $i: index($sizes, $size)
     &.is-#{$i}
       font-size: $size
+  @each $name, $size in $sizes-map
+    .is-#{$name}
+      font-size: $size
 
 .subtitle
   color: $subtitle-color
